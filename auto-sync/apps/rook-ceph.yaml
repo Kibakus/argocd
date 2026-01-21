@@ -31,3 +31,4 @@ spec:
       selfHeal: true
     syncOptions:
     - CreateNamespace=true
+    - Replace=true # This is required to update CRDs # https://github.com/argoproj/argo-cd/issues/11269
