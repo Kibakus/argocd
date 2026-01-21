@@ -22,7 +22,7 @@ spec:
         
             storage_config:
               aws:
-                s3: http://$(S3_ACCESS_KEY):$(S3_SECRET_KEY)@rook-ceph-rgw-ceph-object-store.rook-ceph.svc:80/loki
+                s3: http://admin:12345678@rook-ceph-rgw-ceph-object-store.rook-ceph.svc:80/loki
                 s3forcepathstyle: true
                 insecure: true
         
@@ -46,7 +46,7 @@ spec:
         
         grafana:
           enabled: true
-          adminPassword: 12345678
+          adminPassword: "12345678"
 
   destination:
     server: https://kubernetes.default.svc
