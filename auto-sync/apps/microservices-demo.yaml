@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/GoogleCloudPlatform/microservices-demo
     targetRevision: main
-    path: release/kubernetes-manifests
+    path: kustomize
 
   destination:
     server: https://kubernetes.default.svc
