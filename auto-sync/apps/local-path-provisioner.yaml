@@ -10,6 +10,10 @@ spec:
     chart: local-path-provisioner
     targetRevision: 0.0.35
 
+    helm:
+      values: |
+        storageClass:
+          defaultClass: true
   destination:
     server: https://kubernetes.default.svc
     namespace: local-path-provisioner
