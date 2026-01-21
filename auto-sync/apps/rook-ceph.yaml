@@ -10,8 +10,18 @@ spec:
     chart: rook-ceph
     targetRevision: 1.18.9
     helm:
-      valueFiles:
-        - values/rook-values.yaml
+      values: |
+        crds:
+          enabled: true
+
+        cephClusterSpec:
+          cephVersion:
+            image: quay.io/ceph/ceph:v18
+          dataDirHostPath: /var/lib/rook
+          storage:
+            useAllNodes: true
+            useAllDevices: true
+
   destination:
     server: https://kubernetes.default.svc
     namespace: rook-ceph

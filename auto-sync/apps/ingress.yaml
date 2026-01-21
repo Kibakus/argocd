@@ -13,8 +13,10 @@ spec:
     targetRevision: 4.14.1
 
     helm:
-      valueFiles:
-        - values/ingress-values.yaml
+      values: |
+        controller:
+          service:
+            type: NodePort
 
   destination:
     server: https://kubernetes.default.svc
