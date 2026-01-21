@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rook-ceph-objectstore
+  name: utils
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/Kibakus/argocd.git
     targetRevision: main
-    path: auto-sync/ceph
+    path: auto-sync/utils
   destination:
     server: https://kubernetes.default.svc
-    namespace: rook-ceph
+    namespace: kube-system
   syncPolicy:
     automated:
       prune: true
