@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/GoogleCloudPlatform/microservices-demo
     targetRevision: main
-    path: kustomize
+    path: helm-chart
 
   destination:
     server: https://kubernetes.default.svc
