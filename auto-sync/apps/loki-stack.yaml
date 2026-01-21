@@ -22,7 +22,7 @@ spec:
         
         grafana:
           enabled: true
-          adminPassword: "{{ \"12345678\" }}"
+          adminPassword: "qwerty"
 
   destination:
     server: https://kubernetes.default.svc
