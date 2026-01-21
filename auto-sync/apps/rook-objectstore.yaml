@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: rook-ceph-objectstore
-  namespace: argocd
+  namespace: rook-ceph-objectstore
 spec:
   project: default
   source:
